@@ -20,7 +20,7 @@ Pantry Chef is a Node.js/Express web app that lets users search for recipes by i
 lrabe@terpmail.umd.edu
 
 ## Deployed App Link
-[https://your-app.onrender.com](https://your-app.onrender.com)
+[https://pantry-chef-xnhe.onrender.com/](https://pantry-chef-xnhe.onrender.com/)
 
 ## AI Use
 1. Claude (claude.ai)
