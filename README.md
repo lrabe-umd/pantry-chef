@@ -14,7 +14,7 @@ Pantry Chef is a Node.js/Express web app that lets users search for recipes by i
 [https://www.youtube.com/watch?v=Rxnb25Ko9ww](https://www.youtube.com/watch?v=Rxnb25Ko9ww)
 
 ## APIs
-- **TheMealDB** — [https://www.themealdb.com/api.php](https://www.themealdb.com/api.php) — 
+- **TheMealDB** [https://www.themealdb.com/api.php](https://www.themealdb.com/api.php) 
 
 ## Contact Email
 lrabe@terpmail.umd.edu
