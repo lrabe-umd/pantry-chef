@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pantry Chef</title>
+  <!-- google font requirement -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo">Pantry Chef</div>
+    <nav>
+      <button class="nav-btn active" onclick="showSection('search', event)">Search Recipes</button>
+      <button class="nav-btn" onclick="showSection('saved', event)">Saved Recipes</button>
+    </nav>
+  </header>
+
+  <!-- search section -->
+  <section id="search-section" class="section active">
+    <div class="hero">
+      <h1>What's in your pantry?</h1>
+      <p class="subtitle">Type an ingredient and find recipes you can make right now.</p>
+
+      <!-- this is the form the prof wants us to have -->
+      <form id="search-form" onsubmit="searchRecipes(event)">
+        <div class="input-row">
+          <input
+            type="text"
+            id="ingredient-input"
+            name="ingredient"
+            placeholder="e.g. chicken, garlic, salmon..."
+            required
+          />
+          <button type="submit" class="btn-primary">Find Recipes</button>
+        </div>
+      </form>
+      <button class="btn-random" onclick="loadRandom()">Random Recipe</button>
+    </div>
+
+    <div id="results-area">
+      <p id="results-status" class="status-msg"></p>
+      <div id="results-grid" class="recipe-grid"></div>
+    </div>
+  </section>
+
+  <!-- saved recipes section -->
+  <section id="saved-section" class="section">
+    <div class="section-header">
+      <h2>Saved Recipes</h2>
+      <p class="subtitle">Recipes you bookmarked.</p>
+      <button class="btn-clear" onclick="clearAllSaved()">Clear All</button>
+    </div>
+    <div id="saved-grid" class="recipe-grid"></div>
+    <p id="saved-empty" class="status-msg" style="display:none;">Nothing saved yet. Search for something first.</p>
+  </section>
+
+  <!-- modal for showing recipe details -->
+  <div id="modal-overlay" class="modal-overlay" onclick="closeModal()">
+    <div class="modal" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal()">X</button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <script src="client.js"></script>
+</body>
+</html>
